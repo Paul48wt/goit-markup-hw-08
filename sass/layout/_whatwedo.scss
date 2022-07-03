@@ -1,0 +1,42 @@
+.we {
+  padding-bottom: 94px;
+}
+
+.we__picture {
+  position: relative;
+}
+
+.we__pic-overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  transform: translate(0%, -100%);
+}
+
+.we__title {
+  @extend %sectionTitle;
+}
+
+.we__overlay-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: $textColor;
+  margin: 0;
+}
+
+.we__list {
+  display: flex;
+}
+
+.we__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}

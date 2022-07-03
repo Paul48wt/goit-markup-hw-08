@@ -1,0 +1,38 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients__list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients__title {
+  @extend %sectionTitle;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #afb1b8;
+
+  &:hover,
+  &:focus {
+    border-color: $accentColor;
+    color: $accentColor;
+  }
+
+  transition: color $timeTransition $timeCubic,
+    border-color $timeTransition $timeCubic;
+}
+
+.clients__icon {
+  fill: currentColor;
+}

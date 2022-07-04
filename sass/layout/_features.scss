@@ -1,16 +1,38 @@
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .futures__list {
-  display: flex;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+
+    gap: 30px;
+  }
 }
 
 .futures__item {
-  width: 270px;
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
   }
 }
 
@@ -22,6 +44,10 @@
   font-size: 14px;
   line-height: 1.2;
   text-transform: uppercase;
+  margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .futures__text {
@@ -36,9 +62,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
-  height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: 120px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+    height: 120px;
+  }
 }

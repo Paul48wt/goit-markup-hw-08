@@ -4,13 +4,12 @@
   background-color: #f5f4fa;
 }
 
-.team__title
- {
+.team__title {
   @extend %sectionTitle;
 }
 
 .team__list {
-  display: flex;
+  // display: flex;
 }
 
 .team__item {

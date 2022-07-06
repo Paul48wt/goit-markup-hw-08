@@ -5,17 +5,14 @@
 }
 
 .footer__wrap {
-  // display: flex;
-  // align-items: baseline;
 }
 
 .address__wrap {
-  margin-right: 70px;
+  // margin-right: 70px;
+  text-align: center;
 }
 
 .logo--footer {
-  display: block;
-  margin-right: 0;
   margin-bottom: 20px;
 }
 
@@ -34,6 +31,9 @@
   &:not(:last-child) {
     margin-bottom: 9px;
   }
+}
+
+.address__item {
 }
 
 .address__city {
@@ -104,7 +104,6 @@
 }
 
 .subscribe-group {
-  margin-left: auto;
 }
 
 .footer__btn {
@@ -120,7 +119,7 @@
 }
 
 .email__input {
-  width: 358px;
+  width: 100%;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -132,7 +131,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   border-radius: 4px;
-  margin-right: 12px;
+  margin-bottom: 20px;
 
   &:focus {
     border-color: $accentColor;

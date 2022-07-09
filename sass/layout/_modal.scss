@@ -21,9 +21,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
+  // min-width: 528px;
   min-height: 581px;
-  padding: 40px;
+  min-width: calc(100% - 30px);
+  padding: 25px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -37,6 +38,10 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform $timeTransition $timeCubic,
     opacity $timeTransition $timeCubic;
+
+  @media screen and (min-width: 480px) {
+    padding: 40px;
+  }
 }
 
 .close-button {
@@ -72,13 +77,10 @@
 
 /* Modal */
 
-.modal-form {
-}
-
 .modal-form-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: $titleTextColor;
@@ -152,12 +154,19 @@
 }
 
 .agreement {
-  display: block;
-  font-size: 14px;
-  line-height: 1.71;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: 10px;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: $primaryTextColor;
   margin-bottom: 30px;
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+    line-height: 1.17;
+    align-items: center;
+  }
 }
 
 .modal-button {

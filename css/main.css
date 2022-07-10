@@ -1234,15 +1234,12 @@ body {
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 @media screen and (min-width: 480px) {
   .agreement {
     font-size: 12px;
     line-height: 1.17;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 

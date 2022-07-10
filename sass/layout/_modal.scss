@@ -21,7 +21,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // min-width: 528px;
+
   min-height: 581px;
   min-width: calc(100% - 30px);
   padding: 25px;
@@ -41,6 +41,13 @@
 
   @media screen and (min-width: 480px) {
     padding: 40px;
+    min-width: 450px;
+    min-height: 609px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 40px;
+    min-width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -86,6 +93,9 @@
   color: $titleTextColor;
   margin-top: 0;
   margin-bottom: 12px;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 
 .modal-label-name {
@@ -137,10 +147,13 @@
 }
 
 .modal-form-input.comments {
-  height: 120px;
+  height: 80px;
   padding: 12px 16px;
   resize: none;
   margin-top: 4px;
+  @media screen and (min-width: 480px) {
+    height: 120px;
+  }
 }
 
 .modal-form-input.comments {
@@ -155,16 +168,23 @@
 
 .agreement {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+
   font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: $primaryTextColor;
   margin-bottom: 31px;
+  @media screen and (max-width: 479px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
   @media screen and (min-width: 480px) {
     font-size: 12px;
     line-height: 1.17;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 

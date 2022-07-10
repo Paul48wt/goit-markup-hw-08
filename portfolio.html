@@ -20,20 +20,17 @@
   <body>
     <header class="header header--line">
       <div class="container container--header">
+        <a lang="en" href="./index.html" class="logo logo--header"
+          >Web<span class="studio">Studio</span></a
+        >
+
         <nav class="nav">
-          <a lang="en" href="./index.html" class="logo logo--header"
-            >Web<span class="studio">Studio</span></a
-          >
           <ul class="site-nav list">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link">Студия</a>
             </li>
-            <li class="site-nav__item">
-              <a
-                href="./portfolio.html"
-                class="site-nav__link site-nav__link--current"
-                >Портфолио</a
-              >
+            <li class="site-nav__item site-nav__link--current">
+              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
             </li>
             <li class="site-nav__item">
               <a href="" class="site-nav__link">Контакты</a>
@@ -57,6 +54,62 @@
             >
           </li>
         </ul>
+
+        <!-- Mobile menu -->
+        <button class="menu-open-btn">
+          <svg class="icon-menu_mob" width="24" height="16">
+            <use href="./images/symbol-defs.svg#icon-menu_mob"></use>
+          </svg>
+        </button>
+        <div class="container--mob-menu is-hidden">
+          <button class="close-open-btn">
+            <svg class="icon-close" width="18" height="18">
+              <use href="./images/symbol-defs.svg#icon-close-black"></use>
+            </svg>
+          </button>
+
+          <nav class="mob-menu">
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a href="./index.html" class="mob-menu__link">Студия</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link">Контакты</a>
+              </li>
+            </ul>
+            <div class="wrap__links">
+              <ul class="mob-menu__contacts list">
+                <li class="mob-menu__item">
+                  <a href="tel:380961111111" class="mob-menu__tel"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-menu__item">
+                  <a href="mailto:info@devstudio.com" class="mob-menu__mail"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="social list">
+                <li class="social__item">
+                  <a href="" class="social__link">Instagram</a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link">Twitter</a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link">Facebook</a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -85,12 +138,36 @@
             <li class="portfolio-list-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="no-gap"
-                    width="370"
-                    src="./images/tehno.jpg"
-                    alt="ноутбук"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desk/port-1-1x.jpg 1x,
+                        ./images/desk/port-1-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/port-1-1x.jpg 1x,
+                        ./images/tab/port-1-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/port-1-1x.jpg 1x,
+                        ./images/mob/port-1-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="no-gap"
+                      width="450"
+                      src="./images/desk/port-1-1x.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="thumb-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -110,12 +187,36 @@
             <li class="portfolio-list-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="no-gap"
-                    width="370"
-                    src="./images/neworlean.jpg"
-                    alt="баскетболисты"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desk/port-2-1x.jpg 1x,
+                        ./images/desk/port-2-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/port-2-1x.jpg 1x,
+                        ./images/tab/port-2-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/port-2-1x.jpg 1x,
+                        ./images/mob/port-2-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="no-gap"
+                      width="450"
+                      src="./images/desk/port-2-1x.jpg"
+                      alt="баскетболисты"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="thumb-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -137,12 +238,36 @@
             <li class="portfolio-list-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="no-gap"
-                    width="370"
-                    src="./images/seafood.jpg"
-                    alt="логотип ресторана"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desk/port-3-1x.jpg 1x,
+                        ./images/desk/port-3-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/port-3-1x.jpg 1x,
+                        ./images/tab/port-3-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/port-3-1x.jpg 1x,
+                        ./images/mob/port-3-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="no-gap"
+                      width="450"
+                      src="./images/desk/port-3-1x.jpg"
+                      alt="логотип ресторана"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="thumb-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -164,12 +289,36 @@
             <li class="portfolio-list-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="no-gap"
-                    width="370"
-                    src="./images/prime.jpg"
-                    alt="наушники"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desk/port-4-1x.jpg 1x,
+                        ./images/desk/port-4-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/port-4-1x.jpg 1x,
+                        ./images/tab/port-4-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/port-4-1x.jpg 1x,
+                        ./images/mob/port-4-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="no-gap"
+                      width="450"
+                      src="./images/desk/port-4-1x.jpg"
+                      alt="наушники"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="thumb-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -191,12 +340,36 @@
             <li class="portfolio-list-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="no-gap"
-                    width="370"
-                    src="./images/boxes.jpg"
-                    alt="коробки"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desk/port-5-1x.jpg 1x,
+                        ./images/desk/port-5-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/port-5-1x.jpg 1x,
+                        ./images/tab/port-5-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/port-5-1x.jpg 1x,
+                        ./images/mob/port-5-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="no-gap"
+                      width="450"
+                      src="./images/desk/port-5-1x.jpg"
+                      alt="коробки"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="thumb-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -218,12 +391,36 @@
             <li class="portfolio-list-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="no-gap"
-                    width="370"
-                    src="./images/inspiration.jpg"
-                    alt="монитор"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desk/port-6-1x.jpg 1x,
+                        ./images/desk/port-6-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/port-6-1x.jpg 1x,
+                        ./images/tab/port-6-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/port-6-1x.jpg 1x,
+                        ./images/mob/port-6-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="no-gap"
+                      width="450"
+                      src="./images/desk/port-6-1x.jpg"
+                      alt="монитор"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="thumb-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -245,12 +442,36 @@
             <li class="portfolio-list-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="no-gap"
-                    width="370"
-                    src="./images/limitededition.jpg"
-                    alt="открытая книга"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desk/port-7-1x.jpg 1x,
+                        ./images/desk/port-7-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/port-7-1x.jpg 1x,
+                        ./images/tab/port-7-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/port-7-1x.jpg 1x,
+                        ./images/mob/port-7-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="no-gap"
+                      width="450"
+                      src="./images/desk/port-7-1x.jpg"
+                      alt="открытая книга"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="thumb-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -272,12 +493,36 @@
             <li class="portfolio-list-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="no-gap"
-                    width="370"
-                    src="./images/lab.jpg"
-                    alt="бирка"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desk/port-8-1x.jpg 1x,
+                        ./images/desk/port-8-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/port-8-1x.jpg 1x,
+                        ./images/tab/port-8-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/port-8-1x.jpg 1x,
+                        ./images/mob/port-8-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="no-gap"
+                      width="450"
+                      src="./images/desk/port-8-1x.jpg"
+                      alt="бирка"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="thumb-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -299,12 +544,36 @@
             <li class="portfolio-list-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="no-gap"
-                    width="370"
-                    src="./images/growingbusiness.jpg"
-                    alt="открытый ноутбук"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desk/port-9-1x.jpg 1x,
+                        ./images/desk/port-9-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/port-9-1x.jpg 1x,
+                        ./images/tab/port-9-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/port-9-1x.jpg 1x,
+                        ./images/mob/port-9-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="no-gap"
+                      width="450"
+                      src="./images/desk/port-9-1x.jpg"
+                      alt="открытый ноутбук"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="thumb-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -405,5 +674,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

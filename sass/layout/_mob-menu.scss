@@ -1,3 +1,7 @@
+.container--mob-menu.is-hidden {
+  display: none;
+}
+
 .container--mob-menu {
   position: fixed;
   z-index: 10;
@@ -9,12 +13,17 @@
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 15px;
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 420px) {
     padding-left: 40px;
   }
   @media screen and (min-width: 768px) {
     display: none;
   }
+  overflow: auto;
+}
+
+.mob-menu__list {
+  margin-bottom: 20px;
 }
 
 .mob-menu__link {
@@ -80,6 +89,11 @@
 
 .social {
   display: flex;
+
+  @media screen and (max-width: 400px) {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
 }
 
 .social__link {
@@ -100,12 +114,46 @@
   &:not(:last-child) {
     margin-right: 10px;
   }
-  &:not(:first-child) {
-    &::before {
+  &:not(:last-child) {
+    &::after {
       content: '';
       border: 1px solid rgba(33, 33, 33, 0.2);
       transform: rotate(90deg);
-      margin-right: 10px;
+      margin-left: 10px;
     }
+  }
+}
+
+.close-open-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-color: transparent;
+  background-color: transparent;
+
+  transition: box-shadow $timeTransition $timeCubic;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
+
+.menu-open-btn {
+  width: 40px;
+  height: 40px;
+  border-color: transparent;
+  background-color: transparent;
+
+  transition: fill $timeTransition $timeCubic;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }

@@ -24,56 +24,62 @@
         <a lang="en" href="./index.html" class="logo logo--header"
           >Web<span class="studio">Studio</span></a
         >
-        <div class="menu-container">
-          <nav class="nav">
-            <ul class="site-nav list">
-              <li class="site-nav__item">
-                <a
-                  href="./index.html"
-                  class="site-nav__link site-nav__link--current"
-                  >Студия</a
-                >
-              </li>
-              <li class="site-nav__item">
-                <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
-              </li>
-              <li class="site-nav__item">
-                <a href="" class="site-nav__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <ul class="contacts-list list">
-            <li class="contacts-list__item">
-              <a href="mailto:info@devstudio.com" class="contacts-list__link"
-                ><svg class="contacts-list__icon-mail" width="16" height="12">
-                  <use href="./images/symbol-defs.svg#mail"></use>
-                </svg>
-                info@devstudio.com</a
+
+        <nav class="nav">
+          <ul class="site-nav list">
+            <li class="site-nav__item">
+              <a
+                href="./index.html"
+                class="site-nav__link site-nav__link--current"
+                >Студия</a
               >
             </li>
-            <li class="contacts-list__item">
-              <a href="tel:380961111111" class="contacts-list__link"
-                ><svg class="contacts-list__icon-phone" width="10" height="16">
-                  <use href="./images/symbol-defs.svg#phone"></use></svg
-                >+38 096 111 11 11</a
-              >
+            <li class="site-nav__item">
+              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link">Контакты</a>
             </li>
           </ul>
-        </div>
+        </nav>
+        <ul class="contacts-list list">
+          <li class="contacts-list__item">
+            <a href="mailto:info@devstudio.com" class="contacts-list__link"
+              ><svg class="contacts-list__icon-mail" width="16" height="12">
+                <use href="./images/symbol-defs.svg#mail"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts-list__item">
+            <a href="tel:380961111111" class="contacts-list__link"
+              ><svg class="contacts-list__icon-phone" width="10" height="16">
+                <use href="./images/symbol-defs.svg#phone"></use></svg
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+
         <!-- Mobile menu -->
-        <div class="container--mob-menu">
-          <button class="mob-menu--close-button" data-modal-close>
+        <button class="menu-open-btn">
+          <svg class="icon-menu_mob" width="24" height="16">
+            <use href="./images/symbol-defs.svg#icon-menu_mob"></use>
+          </svg>
+        </button>
+        <div class="container--mob-menu is-hidden">
+          <button class="close-open-btn">
             <svg class="icon-close" width="18" height="18">
               <use href="./images/symbol-defs.svg#icon-close-black"></use>
             </svg>
           </button>
+
           <nav class="mob-menu">
             <ul class="mob-menu__list list">
               <li class="mob-menu__item">
-                <a href="" class="mob-menu__link">Студия</a>
+                <a href="./index.html" class="mob-menu__link">Студия</a>
               </li>
               <li class="mob-menu__item">
-                <a href="" class="mob-menu__link">Портфолио</a>
+                <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
               </li>
               <li class="mob-menu__item">
                 <a href="" class="mob-menu__link">Контакты</a>
@@ -189,12 +195,22 @@
           <ul class="we__list list">
             <li class="we__item">
               <div class="we__picture">
-                <img
-                  class="no-gap"
-                  width="370"
-                  src="./images/box1.jpg"
-                  alt="рабочий стол руки на клавиатуре"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk/we-1-1x.jpg 1x,
+                      ./images/desk/we-1-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    class="no-gap"
+                    width="370"
+                    src="./images/desk/we-1-1x.jpg"
+                    alt="рабочий стол руки на клавиатуре"
+                  />
+                </picture>
+
                 <div class="we__pic-overlay">
                   <p class="we__overlay-title">Десктопные приложения</p>
                 </div>
@@ -202,12 +218,22 @@
             </li>
             <li class="we__item">
               <div class="we__picture">
-                <img
-                  class="no-gap"
-                  width="370"
-                  src="./images/box2.jpg"
-                  alt="ноутбук на столе и рука на нем"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk/we-2-1x.jpg 1x,
+                      ./images/desk/we-2-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    class="no-gap"
+                    width="370"
+                    src="./images/desk/we-2-1x.jpg"
+                    alt="ноутбук на столе и рука на нем"
+                  />
+                </picture>
+
                 <div class="we__pic-overlay">
                   <p class="we__overlay-title">Мобильные приложения</p>
                 </div>
@@ -215,12 +241,22 @@
             </li>
             <li class="we__item">
               <div class="we__picture">
-                <img
-                  class="no-gap"
-                  width="370"
-                  src="./images/box3.jpg"
-                  alt="рука держит планшет"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk/we-3-1x.jpg 1x,
+                      ./images/desk/we-3-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    class="no-gap"
+                    width="370"
+                    src="./images/desk/we-3-1x.jpg"
+                    alt="рука держит планшет"
+                  />
+                </picture>
+
                 <div class="we__pic-overlay">
                   <p class="we__overlay-title">Дизайнерские решения</p>
                 </div>
@@ -236,12 +272,36 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
-              <img
-                class="no-gap"
-                width="270"
-                src="./images/employee01.jpg"
-                alt="мужчина"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desk/team-1-1x.jpg 1x,
+                    ./images/desk/team-1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tab/team-1-1x.jpg 1x,
+                    ./images/tab/team-1-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mob/team-1-1x.jpg 1x,
+                    ./images/mob/team-1-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="no-gap"
+                  width="450"
+                  src="./images/mob/team-1-1x.jpg"
+                  alt="мужчина"
+                />
+              </picture>
+
               <div class="team__member">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p lang="en" class="team__position">Product Designer</p>
@@ -282,12 +342,36 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="no-gap"
-                width="270"
-                src="./images/employee02.jpg"
-                alt="женщина"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desk/team-2-1x.jpg 1x,
+                    ./images/desk/team-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tab/team-2-1x.jpg 1x,
+                    ./images/tab/team-2-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mob/team-2-1x.jpg 1x,
+                    ./images/mob/team-2-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="no-gap"
+                  width="450"
+                  src="./images/mob/team-2-1x.jpg"
+                  alt="женщина"
+                />
+              </picture>
+
               <div class="team__member">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p lang="en" class="team__position">Frontend Developer</p>
@@ -328,12 +412,36 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="no-gap"
-                width="270"
-                src="./images/employee03.jpg"
-                alt="мужчина"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desk/team-3-1x.jpg 1x,
+                    ./images/desk/team-3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tab/team-3-1x.jpg 1x,
+                    ./images/tab/team-3-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mob/team-3-1x.jpg 1x,
+                    ./images/mob/team-3-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="no-gap"
+                  width="450"
+                  src="./images/desk/team-3-1x.jpg"
+                  alt="мужчина"
+                />
+              </picture>
+
               <div class="team__member">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p lang="en" class="team__position">Marketing</p>
@@ -374,12 +482,36 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="no-gap"
-                width="270"
-                src="./images/employee04.jpg"
-                alt="мужчина"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desk/team-4-1x.jpg 1x,
+                    ./images/desk/team-4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tab/team-4-1x.jpg 1x,
+                    ./images/tab/team-4-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mob/team-4-1x.jpg 1x,
+                    ./images/mob/team-4-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="no-gap"
+                  width="450"
+                  src="./images/desk/team-4-1x.jpg"
+                  alt="мужчина"
+                />
+              </picture>
+
               <div class="team__member">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p lang="en" class="team__position">UI Designer</p>
@@ -617,5 +749,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

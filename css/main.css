@@ -5,6 +5,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .list {
   list-style: none;
   margin: 0;
@@ -133,7 +137,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 768px) {
   .container--header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -153,6 +157,11 @@ body {
   line-height: 1.17;
   text-decoration: none;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
+}
 
 .studio {
   color: #000000;
@@ -166,6 +175,7 @@ body {
   .logo--header {
     padding-top: 26px;
     padding-bottom: 26px;
+    margin-right: 88px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -247,6 +257,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 10px;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -275,9 +286,26 @@ body {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .contacts-list__link:hover, .contacts-list__link:focus {
   color: #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-list__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-list__link.mail {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-list__link.tel {
+    padding-bottom: 20px;
+  }
 }
 
 .contacts-list__icon-mail {
@@ -309,7 +337,7 @@ body {
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 15px;
-  overflow: auto;
+  overflow-y: scroll;
 }
 @media screen and (min-width: 420px) {
   .container--mob-menu {
@@ -340,6 +368,10 @@ body {
   color: #2196f3;
 }
 
+.current {
+  color: #2196f3;
+}
+
 .mob-menu__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -349,7 +381,7 @@ body {
   font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: #2196f3;
   text-decoration: none;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -408,7 +440,7 @@ body {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: #2196f3;
   text-decoration: none;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -519,6 +551,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/desk/hero.jpg);
@@ -879,6 +912,12 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
 .button-list {
   display: -webkit-box;
@@ -914,16 +953,17 @@ body {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio--tablet {
-    padding-bottom: 56px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
-}
-
-.portfolio-list {
-  gap: 30px;
 }
 
 .portfolio-list-title {
@@ -944,6 +984,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 30px;
 }
 
 @media screen and (max-width: 767px) {
@@ -963,7 +1004,14 @@ body {
 }
 
 .portfolio-link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   text-decoration: none;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -998,6 +1046,7 @@ body {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 0.5;
+  overflow-y: scroll;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1015,18 +1064,28 @@ body {
   background-color: #2f303a;
 }
 
+@media screen and (min-width: 1200px) {
+  .container--footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1040,15 +1099,16 @@ body {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .address__wrap {
     text-align: center;
     margin-bottom: 60px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .address__wrap {
     width: 232px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1104,15 +1164,16 @@ body {
   color: #2196f3;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer-social {
     text-align: center;
     margin-bottom: 60px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-social {
     width: 206px;
+    text-align: center;
   }
 }
 
@@ -1167,6 +1228,7 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .subscribe-group {
     width: 450px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1289,6 +1351,10 @@ body {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .modal {

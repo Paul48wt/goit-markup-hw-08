@@ -19,7 +19,7 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .mob-menu__list {
@@ -40,6 +40,10 @@
   transition: color $timeTransition $timeCubic;
 }
 
+.current {
+  color: $accentColor;
+}
+
 .mob-menu__item {
   &:not(:last-child) {
     margin-bottom: 32px;
@@ -51,7 +55,7 @@
   font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: $accentColor;
   text-decoration: none;
 
   &:hover,
@@ -101,7 +105,7 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: $accentColor;
   text-decoration: none;
   &:hover,
   &:focus {

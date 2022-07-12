@@ -1,6 +1,10 @@
 .portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .button-list {
@@ -25,16 +29,13 @@
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 
 .portfolio--tablet {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-bottom: 56px;
+    flex-grow: 1;
   }
-}
-
-.portfolio-list {
-  gap: 30px;
 }
 
 .portfolio-list-title {
@@ -53,6 +54,7 @@
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .portfolio-list-item {
@@ -68,7 +70,9 @@
 }
 
 .portfolio-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
 
   &:focus,
@@ -79,6 +83,13 @@
 
   transition: box-shadow $timeTransition $timeCubic;
 }
+
+// .tablet {
+//   height: 440px;
+//   display: flex;
+//   flex-direction: column;
+//   flex-grow: 1;
+// }
 
 .thumb-text {
   font-size: 18px;
@@ -102,6 +113,7 @@
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(0);
   opacity: 0.5;
+  overflow-y: scroll;
 
   .portfolio-link:hover &,
   .portfolio-link:focus & {

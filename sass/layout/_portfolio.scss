@@ -84,13 +84,6 @@
   transition: box-shadow $timeTransition $timeCubic;
 }
 
-// .tablet {
-//   height: 440px;
-//   display: flex;
-//   flex-direction: column;
-//   flex-grow: 1;
-// }
-
 .thumb-text {
   font-size: 18px;
   line-height: 1.56;
@@ -113,12 +106,14 @@
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(0);
   opacity: 0.5;
-  overflow-y: scroll;
 
   .portfolio-link:hover &,
   .portfolio-link:focus & {
     transform: translateY(-100%);
     opacity: 1;
+  }
+  @media screen and (max-width: 1199px) {
+    overflow-y: auto;
   }
 
   transition: transform 250ms $timeCubic, opacity $timeTransition $timeCubic;
